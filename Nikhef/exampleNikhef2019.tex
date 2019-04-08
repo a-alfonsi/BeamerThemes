@@ -1,0 +1,109 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum, lmodern}
+\usetheme{Nikhef2019}
+
+\author{Author One, Author Two, Author Three, Author Four, Author Five, Author Six}
+\title{A very long title, just to have an idea of how it would fit in this title-box}
+% \title{A very short title}
+\subtitle{A subtitle, i.e. the meeting title}
+\institute{example University}
+\date{\today}
+
+\begin{document}
+\frame{\maketitle}
+
+\begin{frame}{Table of contents}
+	\begin{itemize}
+		\item Center page numbers wrt their place (otherwise, if more than one digit they will be shifted horrendously)
+		\item Center title vertically
+		\item Set second item as triangle, third item as dash
+		\item Add Nikhef logo to title slide
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Table of contents}
+	\begin{itemize}
+		\item Center page numbers wrt their place (otherwise, if more than one digit they will be shifted horrendously)
+		\item Center title vertically
+		\item Set second item as triangle, third item as dash
+		\item Add Nikhef logo to title slide
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Table of contents}
+	\begin{itemize}
+		\item Center page numbers wrt their place (otherwise, if more than one digit they will be shifted horrendously)
+		\item Center title vertically
+		\item Set second item as triangle, third item as dash
+		\item Add Nikhef logo to title slide
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Table of contents}
+	\begin{itemize}
+		\item Center page numbers wrt their place (otherwise, if more than one digit they will be shifted horrendously)
+		\item Center title vertically
+		\item Set second item as triangle, third item as dash
+		\item Add Nikhef logo to title slide
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Table of contents}
+	\tableofcontents
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Itemize}
+Hey I guess I am an introduction!
+
+\begin{itemize}
+\item Here you can see an itemization
+\begin{itemize}
+\item It has items
+\begin{itemize}
+\item The items are below each other
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{I am a section}
+% \frame{\sectionpage}
+\sepframe{\insertsection}
+
+
+\begin{frame}{Enumerate}
+\begin{enumerate}
+\item Here you can see an enumeration
+\item It has items
+\item The items are numberedtitle
+\end{enumerate}
+\[
+	f(x)=\sum_{i=0}^\infty \frac{f^{(i)}(x_0)}{i!}(x-x_0)^i
+\]
+\end{frame}
+
+\begin{frame}[plain]{Theorems and environments}
+\begin{theorem}[Sample theorem]
+This presentation is essentially useless.
+\end{theorem}
+\begin{proof}
+This proof is essentially incorrect.
+\end{proof}
+\end{frame}
+
+\begin{frame}{EEEEEEEEHRGEFVWDCVG}
+\begin{example}
+Major problem.
+\end{example}
+\begin{solution}
+Minor nuisance.
+\end{solution}
+\end{frame}
+
+\begin{frame}[plain]{This is a plain frame}
+\lipsum[2]
+\end{frame}
+\end{document}
