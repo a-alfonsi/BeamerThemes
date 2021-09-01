@@ -11,8 +11,8 @@ The repository contains two Beamer themes:
 The files `example*.tex` show how the two themes are loaded within Beamer.
 
 Strictly speaking:
-* Download the wanted `*.sty` file to the same folder where your `.tex` file is going to be created
-* Select the theme by adding the line `\usetheme{*}` between `\documentclass{beamer}` and `\begin{document}`
+* Download the wanted `*.sty` file (and logo files) to the same folder where your main `.tex` file is going to be created
+* Select the theme by adding the line `\usetheme{*}` between `\documentclass{beamer}` and `\begin{document}` of your main `.tex` file
 
 __NOTE:__ `*` stands for the theme name (*Nikhef2019* or *Nikhef2019clean*)
 
