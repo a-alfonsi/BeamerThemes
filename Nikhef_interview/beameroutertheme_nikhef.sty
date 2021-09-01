@@ -1,0 +1,67 @@
+\usepackage[absolute,overlay]{textpos}
+\usepackage{tcolorbox}
+
+\mode<presentation>
+
+
+% TITLE BAR
+%
+\defbeamertemplate*{frametitle}{_nikhef}[1][]
+{
+  \begin{beamercolorbox}[wd=\the\paperwidth,ht=0cm]{frametitle}
+    \begin{tikzpicture}
+      \path [fill=black] (0cm,0cm) rectangle (\the\paperwidth,10cm);
+    \end{tikzpicture}
+  \end{beamercolorbox}
+    %
+  \begin{textblock*}{\the\paperwidth}(0cm,0cm)
+    \begin{tikzpicture}
+      \node [white,font=\large] at (0cm,0cm) {\insertframetitle};
+    \end{tikzpicture}
+  \end{textblock*}
+    %
+  \begin{beamercolorbox}[wd=\the\paperwidth,ht=0.07cm]{}
+    \begin{tikzpicture}
+      \path [fill=redN] (0cm,0cm) rectangle (\the\paperwidth/4.,0.07cm);
+      \path [fill=yellowN] (\the\paperwidth/5.,0cm) rectangle (\the\paperwidth,0.07cm);
+      \path [fill=greenN] (2*\the\paperwidth/5.,0cm) rectangle (\the\paperwidth,0.07cm);
+      \path [fill=blueN] (3*\the\paperwidth/5.,0cm) rectangle (\the\paperwidth,0.07cm);
+      \path [fill=purpleN] (4*\the\paperwidth/5.,0cm) rectangle (\the\paperwidth,0.07cm);
+    \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+
+% FOOTER BAR
+\makeatother
+\defbeamertemplate*{footline}{_nikhef}[1][]
+{%
+  \tcbset{width=\paperwidth/4,nobeforeafter,height=0.5cm,boxsep=0mm,arc=0.5cm,arc is angular, sharp corners, rounded corners=northeast,frame hidden,boxrule=0pt}
+  \begin{beamercolorbox}[wd=\the\paperwidth,sep=0cm]{}
+    \begin{tikzpicture}
+      \path [fill=gray2N] (0cm,0cm) rectangle (\the\paperwidth,0.5cm);
+    \end{tikzpicture}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node [text width=5cm] at (2.5cm,0.25cm)
+      {
+        \begin{tcolorbox}[coltext=white,colback=black]
+        \insertauthor
+        \end{tcolorbox}
+      };
+      \node [text width=5cm] at (7cm,0.25cm)
+      {
+        \begin{tcolorbox}[coltext=white,colback=gray2N]
+        \insertshorttitle
+        \end{tcolorbox}
+      };
+      \node [text width=3cm] at (12.5cm,0.25cm) {
+      \begin{tcolorbox}[rounded corners=northwest,coltext=white,colback=black]
+        \hspace*{0.3cm}\insertframenumber{} / \inserttotalframenumber
+      \end{tcolorbox}
+      };
+    \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+
+\mode<all>

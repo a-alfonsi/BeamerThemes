@@ -1,0 +1,48 @@
+\documentclass{beamer}
+\usepackage{eulervm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+
+
+\title{Presentation title}
+\subtitle{Subtitle}
+\institute{The Institute}
+\date[Date]{\today}
+\author[Author]{Author}
+
+
+\usetheme{_nikhef}
+
+
+\begin{document}
+
+  \begin{frame}[plain,noframenumbering]
+    \titlepage
+  \end{frame}
+  \begin{frame}
+    \frametitle{This is a frame title}
+    \framesubtitle{This is a subtitle and I will not use it}
+    \begin{theorem}
+      Infinite student theorem.
+    \end{theorem}
+    \begin{enumerate}
+      \item<1-> A student hitting keys on a random keyboard
+      \item<2-> For an infinite amount of time
+      \item<3-> Will almost surely
+      \item<4> Finish their thesis
+    \end{enumerate}
+  \end{frame}
+  \begin{frame}{This is another frame title}
+    \begin{itemize}
+      \item One
+      \item Two
+      \item Three
+      \item \alert{Baby}
+      \item You
+      \item And
+      \item Me
+    \end{itemize}
+  \end{frame}
+
+\end{document}

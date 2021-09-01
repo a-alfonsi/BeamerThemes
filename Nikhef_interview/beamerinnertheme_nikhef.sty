@@ -1,0 +1,66 @@
+\usepackage[skins]{tcolorbox}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\setlength{\tabcolsep}{13pt}
+\newlength{\widthN}
+\setlength{\widthN}{0.96\paperwidth}
+
+
+\mode<presentation>
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  \fill[color=grayN] (\the\paperwidth-0.04*\the\paperwidth,0.6cm) rectangle(\the\paperwidth-0.045*\the\paperwidth,1.7);
+   
+  \path [fill=redN] (0cm,0.14cm) rectangle (\the\paperwidth/4.,0.07cm);
+  \path [fill=yellowN] (\the\paperwidth/5.,0.14cm) rectangle (\the\paperwidth,0.07cm);
+  \path [fill=greenN] (2*\the\paperwidth/5.,0.14cm) rectangle (\the\paperwidth,0.07cm);
+  \path [fill=blueN] (3*\the\paperwidth/5.,0.14cm) rectangle (\the\paperwidth,0.07cm);
+  \path [fill=purpleN] (4*\the\paperwidth/5.,0.14cm) rectangle (\the\paperwidth,0.07cm);
+  
+  \path[fill overzoom image=cmsround.jpg, fill image opacity=0.34] (0,5) rectangle (\the\paperwidth,\the\paperheight);
+  
+  \foreach \n in {1,2,...,40}{
+  		\fill[color=white] (0.4*\n,5) rectangle (0.1+0.4*\n,\the\paperheight);
+  }
+
+  
+    \ifnum\thepage>1\relax%
+   \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+   \fi
+  \end{tikzpicture}
+  %
+  
+
+}
+
+% Title page
+\defbeamertemplate*{title page}{_nikhef}[1][]
+{ 
+   \vskip5.5cm%
+    \begin{beamercolorbox}[wd=12cm,leftskip=0cm,#1]{title page header}
+      \usebeamerfont{title}\textbf{\inserttitle}\par
+      \usebeamerfont{subtitle}\insertsubtitle%
+    \end{beamercolorbox}%
+    \vskip1.4cm%
+    
+   \begin{beamercolorbox}[wd=\the\paperwidth,leftskip=0cm,#1]{author}    
+   %\begin{center}
+   		\begin{tabularx}{\the\widthN}{>{\hsize=0.7\hsize}L>{\hsize=0.3\hsize}R}
+ 		& \insertinstitute  \\
+ 		\textbf{\insertauthor} & \insertdate
+		\end{tabularx}
+	%\end{center}
+
+   \end{beamercolorbox}
+
+    
+
+    
+  \vfill
+}
+
+\mode
+<all>
